@@ -1,2 +1,3 @@
 # redux-starter
-Mosh Redux tut
+
+Mosh Ultimate Redux Course
