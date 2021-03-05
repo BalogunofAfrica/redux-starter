@@ -1,10 +1,7 @@
 import configStore from "./store/configStore";
+import { loadBugs, resolveBug } from "./store/bugs";
 
 const store = configStore();
 
-store.dispatch({ type: "x", payload: { message: "This one don cast" } });
-
-store.dispatch((dispatch, getState) => {
-  dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });
-  console.log(getState());
-});
+store.dispatch(loadBugs());
+setTimeout(() => store.dispatch(resolveBug(2)), 2000);
